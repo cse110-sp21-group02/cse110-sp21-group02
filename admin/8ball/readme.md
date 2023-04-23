@@ -1,0 +1,1 @@
+[Link for magic 8 ball]()
