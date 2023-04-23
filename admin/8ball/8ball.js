@@ -19,13 +19,23 @@ $(document).ready(function(){
     };
     $("#answer").hide();
   
-    var onClick = function()
-    {
-      $("#answer").hide();
-      $("#8ball").attr("src", "https://s3.amazonaws.com/media.skillcrush.com/skillcrush/wp-content/uploads/2016/09/magic8ballQuestion.png");
-      var question = prompt("What do you want to know?");
-      magic8Ball.getAnswer(question);
-    };
-    
+    // var onClick = function()
+    // {
+    //   $("#answer").hide();
+    //   $("#8ball").attr("src", "https://s3.amazonaws.com/media.skillcrush.com/skillcrush/wp-content/uploads/2016/09/magic8ballQuestion.png");
+    //   var question = prompt("What do you want to know?");
+    //   magic8Ball.getAnswer(question);
+    // };
+    var onClick = function(event) {
+        var question = $("#questionBox").val().trim();
+        if (question === "") {
+          alert("Please enter a question.");
+        } else {
+          $("#answer").hide();
+          $("#8ball").attr("src", "https://s3.amazonaws.com/media.skillcrush.com/skillcrush/wp-content/uploads/2016/09/magic8ballQuestion.png");
+          magic8Ball.getAnswer(question);
+        }
+      };
+
     $("#questionButton").click( onClick );
   });
