@@ -44,8 +44,8 @@
   }
   .ball img{
     position: fixed;
-    top: 160%;
-    left: 150%;
+    top: auto;
+    left: auto;
     /* transform: translate(-50%, -50%); */
     width: 100%;
     /* height: 300px; */
