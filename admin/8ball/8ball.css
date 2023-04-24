@@ -38,7 +38,7 @@
     text-align: center;
   }
   .ball img{
-    position: relative;
+    position: fixed;
     top: 100%;
     left: 100%;
     /* transform: translate(-50%, -50%); */
