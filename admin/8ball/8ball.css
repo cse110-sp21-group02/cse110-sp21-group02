@@ -43,7 +43,7 @@
     text-align: center;
   }
   .ball img{
-    position: static;
+    position: fixed;
     top: auto;
     left: auto;
     /* transform: translate(-50%, -50%); */
