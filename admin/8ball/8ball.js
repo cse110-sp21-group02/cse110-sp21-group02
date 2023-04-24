@@ -4,7 +4,11 @@ $(document).ready(function(){
     magic8Ball.listofanswers = ["It is certain.", "It is decidedly so.", "Without a doubt.", "Yes, definitely.", "You may rely on it.", "As I see it, yes.", "Most likely.", "Outlook good.", "Yes.", "Signs point to yes.", "Reply hazy, try again.", "Ask again later.", "Better not tell you now.", "Cannot predict now.", "Concentrate and ask again.", "Don't count on it.", "My reply is no.", "My sources say no.", "Outlook not so good.", "Very doubtful."];
    
 
-
+    function spin() {
+      var img = document.getElementById("ball.png");
+      img.style.transform = "rotate(360deg)";
+      img.style.transition = "transform 2s ease-in-out";
+    }
 
 
     magic8Ball.getAnswer = function(question)
@@ -48,6 +52,8 @@ $(document).ready(function(){
         if (question === "") {
           alert("Please enter a question.");
         } else {
+          spin;
+
           $("#answer").hide();
           $("#8ball").attr("src", "ball.png");
           magic8Ball.getAnswer(question);
