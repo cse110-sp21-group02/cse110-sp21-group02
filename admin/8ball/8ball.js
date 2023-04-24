@@ -5,7 +5,7 @@ $(document).ready(function(){
    
 
     function spin() {
-      var img = document.getElementById("ball.png");
+      var img = $("#8ball");
       img.style.transform = "rotate(360deg)";
       img.style.transition = "transform 2s ease-in-out";
     }
