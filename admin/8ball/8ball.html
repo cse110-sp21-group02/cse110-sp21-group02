@@ -9,9 +9,14 @@
 	  <link rel="stylesheet" type="text/css" href="8ball.css">
 	  <meta name="viewport" content="width=device-width, initial-scale=1">
 	  <style>
+		.center {
+  			display: block;
+  			margin-left: auto;
+ 		    margin-right: auto;
+ 		    width: 50%;
+		}
 		.button {
-
-			box-shadow:#999;
+			box-shadow:#666;
 		}
 		.button:active {
   			box-shadow: #666;
@@ -39,7 +44,7 @@
 			</header>
 
 			<div class="ball">
-                <img id="8ball" src="ball.png">
+                <img id="8ball" src="ball.png" class="center">
 
                 <p id="answer" class="answer">THIS IS WHERE THE ANSWER GOES</p>
 			</div>
