@@ -129,7 +129,23 @@
     -webkit-box-shadow: 10px 3px 0 0 #c7e0ee inset;
     box-shadow: 10px 3px 0 0 #65bbe2 inset;
   }
-  
+  .spindiv {
+    width: 100px;
+    height: 100px;
+    background-color: #0CB1C4;
+    animation-name: spin;
+    animation-duration: 5000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear; 
+  }
+  @keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+  }
   .cloud:after {
     width: 90px;
     height: 90px;

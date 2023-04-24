@@ -52,7 +52,13 @@ $(document).ready(function(){
         if (question === "") {
           alert("Please enter a question.");
         } else {
-          spin;
+          
+          const ele = document.getElementById("ball.png");
+          if (ele.classList.contains("spindiv")) {
+            ele.classList.remove("spindiv");
+          } else {
+            ele.classList.add("spindiv");
+          }
 
           $("#answer").hide();
           $("#8ball").attr("src", "ball.png");
