@@ -20,6 +20,8 @@
   }
   
   header {
+    background-color: lightblue;
+
     text-align: center;
   }
   header span {
@@ -77,6 +79,8 @@
   }
   
   footer p {
+    background-color: lightblue;
+
     text-transform: uppercase;
     font-size: 12px;
     font-size: .75em;
