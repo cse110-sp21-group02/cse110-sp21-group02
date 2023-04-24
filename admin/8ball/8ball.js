@@ -34,7 +34,7 @@ $(document).ready(function(){
       counter++;
       if (counter >= 50) {
         clearInterval(interval);
-        $("#8ball").attr("src", "https://s3.amazonaws.com/media.skillcrush.com/skillcrush/wp-content/uploads/2016/09/answerside.png");
+        $("#8ball").attr("src", "ball.png");
         $("#answer").fadeIn(300);
       }
     }, 100);
@@ -49,7 +49,7 @@ $(document).ready(function(){
           alert("Please enter a question.");
         } else {
           $("#answer").hide();
-          $("#8ball").attr("src", "https://s3.amazonaws.com/media.skillcrush.com/skillcrush/wp-content/uploads/2016/09/magic8ballQuestion.png");
+          $("#8ball").attr("src", "ball.png");
           magic8Ball.getAnswer(question);
         }
       };
