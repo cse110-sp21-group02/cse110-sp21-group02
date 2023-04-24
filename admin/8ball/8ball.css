@@ -39,7 +39,7 @@
   }
   .ball img{
     position: fixed;
-    top: 100%;
+    top: 80%;
     left: 150%;
     /* transform: translate(-50%, -50%); */
     width: 100%;
