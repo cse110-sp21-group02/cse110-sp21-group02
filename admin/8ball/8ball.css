@@ -91,21 +91,21 @@
   .cloud {
     width: 250px;
     height: 60px;
-    background-color: white;
+    background-color: rgb(75, 185, 204);
     border-radius: 200px;
     -moz-border-radius: 200px;
     -webkit-border-radius: 200px;
     position: relative;
     
-    -moz-box-shadow: 9px -7px 0 0 #f7e7eb inset;
-    -webkit-box-shadow: 9px -7px 0 0 #f7e7eb inset;
-    box-shadow: 9px -7px 0 0 #f7e7eb inset;
+    -moz-box-shadow: 9px -7px 0 0 #bee1f1 inset;
+    -webkit-box-shadow: 9px -7px 0 0 #c7e0ee inset;
+    box-shadow: 9px -7px 0 0 #65bbe2 inset;
   }
   
   .cloud:before, .cloud:after {
     content: '';
     position: absolute;
-    background-color: white;
+    background-color: rgb(75, 185, 204);
     width: 120px;
     height:120px;
     top: -75px;
@@ -118,9 +118,9 @@
     -moz-transform: rotate(30deg);
     -webkit-transform: rotate(30deg);
     
-    -moz-box-shadow: 10px 3px 0 0 #f7e7eb inset;;
-    -webkit-box-shadow: 10px 3px 0 0 #f7e7eb inset;
-    box-shadow: 10px 3px 0 0 #f7e7eb inset;
+    -moz-box-shadow: 10px 3px 0 0 #bee1f1 inset;;
+    -webkit-box-shadow: 10px 3px 0 0 #c7e0ee inset;
+    box-shadow: 10px 3px 0 0 #65bbe2 inset;
   }
   
   .cloud:after {
