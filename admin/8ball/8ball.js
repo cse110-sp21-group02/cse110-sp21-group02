@@ -61,3 +61,47 @@ $(document).ready(function(){
 
     $("#questionButton").click( onClick );
   });
+
+var number_words = ["It is certain.", "It is decidedly so.", "Without a doubt.", "Yes, definitely.", "You may rely on it.", "As I see it, yes.", "Most likely.", "Outlook good.", "Yes.", "Signs point to yes.", "Reply hazy, try again.", "Ask again later.", "Better not tell you now.", "Cannot predict now.", "Concentrate and ask again.", "Don't count on it.", "My reply is no.", "My sources say no.", "Outlook not so good.", "Very doubtful."];
+var height_slot_number = '100';
+
+function go(tens, units){
+	addSlots($("#slots_units .number-wrapper"));
+	addSlots($("#slots_units .number-wrapper"));
+	moveSlots($("#slots_units .number-wrapper"), number_words[units]);
+	addSlots($("#slots_tens .number-wrapper"));
+	addSlots($("#slots_tens .number-wrapper"));
+	moveSlots($("#slots_tens .number-wrapper"), number_words[tens]);
+}
+
+$(document).ready(function(){
+	addSlots($("#slots_units .number-wrapper"));
+	addSlots($("#slots_tens .number-wrapper"));
+	$('#arm').click(function(e) {
+		var arm = $(this).addClass('clicked');
+		delay = setTimeout(function() { arm.removeClass('clicked'); }, 500);
+		e.preventDefault();
+		go(Math.floor(Math.random() * 10), Math.floor(Math.random() * 10));
+	});
+});
+
+function addSlots(jqo){
+	for(var i = 0; i < 10; i++){
+		jqo.append("<div class='slot'>"+ number_words[i] +"</div>");
+	}
+}
+
+function moveSlots(jqo, word){
+	var time	= 6500;
+	var number	= number_words.indexOf(word);
+	time		+= Math.round(Math.random()*1000);
+	jqo.stop(true,true);
+
+	var num_slot    = Math.round((jqo.find('.slot').length)/20);
+	var margin_top  = ((num_slot -1) * (height_slot_number * 10)) + (number * height_slot_number);
+
+	jqo.animate(
+		{"margin-top":"-"+ margin_top +"px"},
+		{'duration' : time, 'easing' : "easeOutElastic"}
+	);
+}
