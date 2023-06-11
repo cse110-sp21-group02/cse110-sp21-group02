@@ -280,17 +280,14 @@ function init() {
     question.text = predefinedQuestions[i];
     selectMenu.appendChild(question);
   }
-
-  // Connect handlers with buttons
+  
+  // Add event listeners to buttons
   document.getElementById('generate-btn').addEventListener('click', generateHandler);
-  document.getElementById('save').addEventListener('click', () => {
-    if (currentReading && currentReading != {}) {
-      saveReading(currentReading);
-    } else {
-      alert('No reading to save');
-    }
-    renderHistory();
-  });
+  document.getElementById('save').addEventListener('click', saveHandler);
+  document.getElementById('nav-btn-history').addEventListener('click', displayHistoryScreen);
+  document.getElementById('nav-btn-home').addEventListener('click', displayHomeScreen);
+  document.getElementById('popup-close-btn').addEventListener('click', closePopup);
+
 
   // On load, we should start at the home screen
   displayHomeScreen();
@@ -307,13 +304,27 @@ function init() {
  * Displays the cards and the fortune.
  * Updates the currentReading variable.
  */
-function generateHandler() {
+function generateHandler() { // eslint-disable-line no-unused-vars
   let question = getUserInputText();
   const reading = generateReading(question);
   currentReading = reading;
   const isFromHistory = false;
   displayReading(isFromHistory);
   allowCardFlips = true;
+}
+
+/**
+ * Handler for the save button on click.
+ * Saves the current reading to the history.
+ * Updates the history display.
+ */
+function saveHandler() { // eslint-disable-line no-unused-vars
+  if (currentReading && currentReading != {}) {
+    saveReading(currentReading);
+  } else {
+    alert('No reading to save');
+  }
+  renderHistory();
 }
 
 /**
@@ -326,9 +337,9 @@ function displayHomeScreen() {
   document.getElementById('history-section').hidden = true;
 
   // change card images back to their defaults
-  document.getElementById('display-img-left').src = './images/ccb.jpeg';
-  document.getElementById('display-img-mid').src = './images/ccb.jpeg';
-  document.getElementById('display-img-right').src = './images/ccb.jpeg';
+  document.getElementById('display-img-left').src = './images/default-card.jpeg';
+  document.getElementById('display-img-mid').src = './images/default-card.jpeg';
+  document.getElementById('display-img-right').src = './images/default-card.jpeg';
 
   // hide save button and fortune meaning
   document.getElementById('meaning-section').hidden = true;
@@ -469,7 +480,7 @@ function renderHistory() {
 
     // Create and add functionality for RENAME button
     let renameBtn = document.createElement('button');
-    renameBtn.classList.add('history-item-btn-rename');
+    renameBtn.classList.add('history-item-btn');
     renameBtn.innerHTML = 'Rename';
     renameBtn.addEventListener('click', () => {
       let renamePopupBtn = document.getElementById('popup-rename-btn');
@@ -484,7 +495,7 @@ function renderHistory() {
 
     // Create and add functionality for DELETE button
     let deleteBtn = document.createElement('button');
-    deleteBtn.classList.add('history-item-btn-delete');
+    deleteBtn.classList.add('history-item-btn');
     deleteBtn.innerHTML = 'Delete';
     deleteBtn.addEventListener('click', () => {
       deleteReading(historyObj.id);
@@ -493,7 +504,7 @@ function renderHistory() {
 
     // Create and add functionality for DISPLAY button
     let displayBtn = document.createElement('button');
-    displayBtn.classList.add('history-item-btn-display');
+    displayBtn.classList.add('history-item-btn');
     displayBtn.innerHTML = 'Display';
     displayBtn.addEventListener('click', () => {
       currentReading = getReading(historyObj.id);
