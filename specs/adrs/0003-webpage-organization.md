@@ -6,8 +6,8 @@ We are developing a web app and need to decide if it will run on a single web pa
 
 ## Considered Options
 
-* Multiple pages for homepage and history page
-* Simulate different pages by hiding and unhiding elements as needed
+  * Multiple pages for homepage and history page
+  * Simulate different pages by hiding and unhiding elements as needed
 
 ## Decision Outcome
 
