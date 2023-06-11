@@ -710,6 +710,7 @@ function drawCards() {
  */
 function openPopup() {
   document.getElementById('popup').style.display = 'flex';
+  document.getElementById('new-name').focus();
 }
 
 /**

@@ -2,7 +2,6 @@
 @import url("https://fonts.googleapis.com/css?family=DM+Sans:500,700&display=swap");
 
 body {
-  /* background-color: white; */
   background-color: #bfdfec;
   display: flex;
   flex-direction: column;
@@ -62,6 +61,7 @@ h2{
   font-weight: 400;
   font-size: 40px;
   line-height: 48px;
+  text-shadow: 2px 2px #687bd2;
 }
 
 h3{
@@ -70,6 +70,7 @@ h3{
   margin-top: 5%;
   font-size: x-large;
   margin-right: 10px;
+  text-shadow: 2px 2px #687bd2;
 }
 
 p {
@@ -80,19 +81,6 @@ p {
   font-weight: 400;
   font-size: 20px;
   line-height: 32px;
-}
-
-.button {
-  background-image: url("images/button.png");
-  width: 128px;
-  border: 0;
-  margin: 7px 0 5px 7px;
-  padding: 3px 0 6px;
-  cursor: hand;
-  cursor: pointer;
-  color: #9fad19;
-  font-family: Tahoma, sans-serif;
-  font-size: 11px;
 }
 
 /* Dropdown Button */
@@ -183,6 +171,7 @@ p {
   background-size: 300% 100%;
   border-radius: 50px;
   transition: all 0.4s ease-in-out;
+  margin: 1px;
 }
 
 .history-item-btn-display:hover {
@@ -209,6 +198,7 @@ p {
   background-size: 300% 100%;
   border-radius: 50px;
   transition: all 0.4s ease-in-out;
+  margin: 1px;
 }
 
 .history-item-btn-delete:hover {
@@ -235,6 +225,7 @@ p {
   background-size: 300% 100%;
   border-radius: 50px;
   transition: all 0.4s ease-in-out;
+  margin: 1px;
 }
 
 .history-item-btn-rename:hover {
@@ -249,7 +240,6 @@ p {
 #save {
   background-image: linear-gradient(to right, #70c4e9, #6b99e9, #04befe, #72a2ea);
   box-shadow: 0 4px 15px 0 rgba(65 132 234 75%);
-  margin-top: 20px;
   text-align: center;
   width: 80px;
   font-size: 16px;
@@ -261,6 +251,7 @@ p {
   background-size: 300% 100%;
   border-radius: 50px;
   transition: all 0.4s ease-in-out;
+  margin-bottom: 20px;
 }
 
 #save:hover {
@@ -362,9 +353,10 @@ p {
 }
 
 .history-item-img {
-  width: 50px;
+  width: 75px;
   height: 100px;
-  padding-right: 10px;
+  border-radius: 5px;
+  margin: 5px 2px;
 }
 
 .history {
@@ -389,17 +381,50 @@ p {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0 0 0 50%);
+  background-color: rgba(0 0 0 / 50%);
   align-items: center;
   justify-content: center;
 }
 
 /* Style for the popup box */
 .popup-box {
-  background-color: #fff;
+  background-color: #bfdfec;
   padding: 20px;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0 0 0 30%);
+}
+.popup-box button {
+  background-image: linear-gradient(to right, #70c4e9, #6b99e9, #04befe, #72a2ea);
+  box-shadow: 0 4px 15px 0 rgba(65 132 234 75%);
+  margin-top: 7px;
+  text-align: center;
+  width: 80px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  height: 22px;
+  border: none;
+  background-size: 300% 100%;
+  border-radius: 50px;
+  transition: all 0.4s ease-in-out;
+  margin: 1px;
+}
+.popup-box button:hover {
+  background-position: 100% 0;
+  transition: all 0.4s ease-in-out;
+}
+.popup-box input {
+  border-radius: 15px;
+  font-size: 17px;
+  font-family: "DM Sans", sans-serif;
+  font-style: normal;
+  border: none;
+  resize: none;
+  cursor: pointer;
+  text-align: center;
+  background-color: white;
+  background-repeat: no-repeat;
 }
 
 #display-img-left {
