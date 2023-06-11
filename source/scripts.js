@@ -481,6 +481,7 @@ function renderHistory() {
     // Create and add functionality for RENAME button
     let renameBtn = document.createElement('button');
     renameBtn.classList.add('history-item-btn');
+    renameBtn.classList.add('history-item-btn-rename');
     renameBtn.innerHTML = 'Rename';
     renameBtn.addEventListener('click', () => {
       let renamePopupBtn = document.getElementById('popup-rename-btn');
@@ -496,6 +497,7 @@ function renderHistory() {
     // Create and add functionality for DELETE button
     let deleteBtn = document.createElement('button');
     deleteBtn.classList.add('history-item-btn');
+    deleteBtn.classList.add('history-item-btn-delete');
     deleteBtn.innerHTML = 'Delete';
     deleteBtn.addEventListener('click', () => {
       deleteReading(historyObj.id);
@@ -505,6 +507,7 @@ function renderHistory() {
     // Create and add functionality for DISPLAY button
     let displayBtn = document.createElement('button');
     displayBtn.classList.add('history-item-btn');
+    displayBtn.classList.add('history-item-btn-display');
     displayBtn.innerHTML = 'Display';
     displayBtn.addEventListener('click', () => {
       currentReading = getReading(historyObj.id);
