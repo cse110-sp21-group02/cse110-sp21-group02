@@ -82,7 +82,7 @@ describe('Basic user flow for Website', () => {
     it('Return to homepage', async () => {
        console.log('Returning to home...');
        // Select and click home button
-       const homeButton = await page.$('#home-btn');
+       const homeButton = await page.$('#nav-btn-home');
        await homeButton.click();
 
        // Expect local storage to be empty
