@@ -36,7 +36,7 @@ describe('Basic user flow for Website', () => {
       });
 
       // Expect local storage to not be empty
-      expect(currentStorage != '[]').toBe(true);
+      expect(currentStorage !== '[]').toBe(true);
     });
   
     // User check history
