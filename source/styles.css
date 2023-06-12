@@ -181,7 +181,7 @@ button:focus {
   border-radius: 8px 8px 0 0;
 }
 
-@media (width <=580px) {
+@media (width <= 580px) {
   .nav {
     overflow: auto;
   }
