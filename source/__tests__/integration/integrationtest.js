@@ -2,7 +2,7 @@
 describe('Basic user flow for Website', () => {
     // Visit the web app
     beforeAll(async () => {
-      await page.goto('https://cse110-sp21-group02.github.io/cse110-sp21-group02/source/index.html');
+      await page.goto('http://127.0.0.1:5500/source/');
     });
   
     // Next user will generate a fortune 
@@ -82,7 +82,7 @@ describe('Basic user flow for Website', () => {
     it('Return to homepage', async () => {
        console.log('Returning to home...');
        // Select and click home button
-       const homeButton = await page.$('.topnav');
+       const homeButton = await page.$('#nav-btn-home');
        await homeButton.click();
 
        // Expect local storage to be empty

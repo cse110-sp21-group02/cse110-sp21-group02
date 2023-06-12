@@ -1,8 +1,12 @@
-/* front style */
+/* Font Style */
 @import url("https://fonts.googleapis.com/css?family=DM+Sans:500,700&display=swap");
 
+:root {
+  font-family: "DM Sans", sans-serif;
+  font-style: normal;
+}
+
 body {
-  /* background-color: white; */
   background-color: #bfdfec;
   display: flex;
   flex-direction: column;
@@ -13,22 +17,7 @@ body {
   animation: movement 10s linear infinite;
 }
 
-::-webkit-scrollbar {
-    width: 8px;
-}
-
-::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px     rgba(0,0,0,0.2); 
-    border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb {
-    background-color: white;
-    border-radius: 10px;
-    -webkit-box-shadow: inset 0 0 6px     rgba(0,0,0,0.3); 
-}
-
-/* cloud movement */
+/* Cloud movement */
 @keyframes movement {
   0% {
     background-position: 0 0;
@@ -39,10 +28,26 @@ body {
   }
 }
 
+/* || Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0 0 0 / 20%);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: inset 0 0 6px rgba(0 0 0 / 30%);
+}
+
+/* || Text Styling */
 h1 {
   color: white;
   font-family: "Henny Penny", cursive;
-  font-style: normal;
   margin: auto;
   display: grid;
   letter-spacing: 0.0015em;
@@ -55,103 +60,34 @@ h1 {
   line-height: 97px;
 }
 
-h2,
-h3 {
+h2 {
   color: white;
-  font-family: "DM Sans", sans-serif;
-  font-style: normal;
   font-weight: 400;
   font-size: 40px;
   line-height: 48px;
+  text-shadow: 2px 2px #687bd2;
+}
+
+h3 {
+  color: black;
+  margin-top: 5%;
+  font-size: x-large;
+  margin-right: 10px;
+  text-shadow: 2px 2px #687bd2;
 }
 
 p {
   color: white;
-  font-family: "DM Sans", sans-serif;
-  font-style: normal;
   text-shadow: 2px 2px #687bd2;
   font-weight: 400;
   font-size: 20px;
   line-height: 32px;
 }
 
-/* Dropdown Button */
-.dropbtn {
-  background-color: #3498db;
-  color: black;
-  padding: 20px;
-  font-size: 30px;
-  border: none;
-  cursor: pointer;
-}
-
-/* Dropdown button on hover & focus */
-.dropbtn:hover,
-.dropbtn:focus {
-  background-color: #2980b9;
-}
-
-/* The container <div> - needed to position the dropdown content */
-.dropdown {
-  position: relative;
-  display: inline-block;
-  margin-top: 10px;
-}
-
-/* Dropdown Content (Hidden by Default) */
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  min-width: 160px;
-  box-shadow: 0 8px 16px 0 rgba(0 0 0 / 20%);
-  z-index: 1;
-}
-
-/* Links inside the dropdown */
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
-.show {
-  display: block;
-}
-
-/* style of the buttons */
-#generate-btn {
+/* || Buttons */
+button {
   background-image: linear-gradient(to right, #70c4e9, #6b99e9, #04befe, #72a2ea);
   box-shadow: 0 4px 15px 0 rgba(65 132 234 75%);
-  margin-top: 25px;
-  text-align: center;
-  width: 120px;
-  font-size: 16px;
-  font-weight: 600;
-  color: #fff;
-  cursor: pointer;
-  height: 33px;
-  border: none;
-  background-size: 300% 100%;
-  border-radius: 50px;
-  transition: all 0.4s ease-in-out;
-}
-
-#generate-btn:hover {
-  background-position: 100% 0;
-  transition: all 0.4s ease-in-out;
-}
-
-#generate-btn:focus {
-  outline: none;
-}
-
-.history-item-btn-display {
-  background-image: linear-gradient(to right, #70c4e9, #6b99e9, #04befe, #72a2ea);
-  box-shadow: 0 4px 15px 0 rgba(65 132 234 75%);
-  margin-top: 7px;
   text-align: center;
   width: 80px;
   font-size: 16px;
@@ -163,103 +99,41 @@ p {
   background-size: 300% 100%;
   border-radius: 50px;
   transition: all 0.4s ease-in-out;
+  margin: 1px;
 }
 
-.history-item-btn-display:hover {
+button:hover {
   background-position: 100% 0;
   transition: all 0.4s ease-in-out;
 }
 
-.history-item-btn-display:focus {
-  outline: none;
-}
-
-.history-item-btn-delete {
-  background-image: linear-gradient(to right, #70c4e9, #6b99e9, #04befe, #72a2ea);
-  box-shadow: 0 4px 15px 0 rgba(65 132 234 75%);
-  margin-top: 7px;
-  text-align: center;
-  width: 80px;
-  font-size: 16px;
-  font-weight: 600;
-  color: #fff;
-  cursor: pointer;
-  height: 22px;
-  border: none;
-  background-size: 300% 100%;
-  border-radius: 50px;
-  transition: all 0.4s ease-in-out;
-}
-
-.history-item-btn-delete:hover {
-  background-position: 100% 0;
-  transition: all 0.4s ease-in-out;
-}
-
-.history-item-btn-delete:focus {
-  outline: none;
-}
-
-.history-item-btn-rename {
-  background-image: linear-gradient(to right, #70c4e9, #6b99e9, #04befe, #72a2ea);
-  box-shadow: 0 4px 15px 0 rgba(65 132 234 75%);
-  margin-top: 7px;
-  text-align: center;
-  width: 80px;
-  font-size: 16px;
-  font-weight: 600;
-  color: #fff;
-  cursor: pointer;
-  height: 22px;
-  border: none;
-  background-size: 300% 100%;
-  border-radius: 50px;
-  transition: all 0.4s ease-in-out;
-}
-
-.history-item-btn-rename:hover {
-  background-position: 100% 0;
-  transition: all 0.4s ease-in-out;
-}
-
-.history-item-btn-rename:focus {
+button:focus {
   outline: none;
 }
 
 #save {
-  background-image: linear-gradient(to right, #70c4e9, #6b99e9, #04befe, #72a2ea);
-  box-shadow: 0 4px 15px 0 rgba(65 132 234 75%);
-  margin-top: 20px;
-  text-align: center;
-  width: 80px;
-  font-size: 16px;
-  font-weight: 600;
-  color: #fff;
-  cursor: pointer;
-  height: 22px;
-  border: none;
-  background-size: 300% 100%;
-  border-radius: 50px;
-  transition: all 0.4s ease-in-out;
+  margin-bottom: 20px;
 }
 
-#save:hover {
-  background-position: 100% 0;
-  transition: all 0.4s ease-in-out;
+#generate-btn {
+  margin-top: 25px;
+  width: 120px;
+  height: 33px;
 }
 
-#save:focus {
-  outline: none;
+.history-item-btn {
+  margin-top: 5px;
 }
 
-/* style of the nav section */
+/* || Navigation Section */
 .nav {
   display: inline-flex;
   position: relative;
   overflow: hidden;
+  margin-top: 30px; /* Adjust the value as needed */
   max-width: 100%;
   background-color: #fff;
-  padding: 0 20px;
+  padding: 0 40px;
   border-radius: 40px;
   box-shadow: 0 10px 40px rgba(159 162 177 80%);
 }
@@ -271,7 +145,6 @@ p {
   transition: 0.3s;
   margin: 0 6px;
   z-index: 1;
-  font-family: "DM Sans", sans-serif;
   font-weight: 500;
   position: relative;
 }
@@ -314,46 +187,32 @@ p {
   }
 }
 
-#display {
-  margin-top: 10px;
+/* || Question Selector */
+#question-list {
+  margin-top: 0;
+  background-color: #fff;
+  padding: 16px;
+  color: #83818c;
+  font-weight: bold;
+  border-radius: 30px;
 }
 
-.container {
+/* || Meaning Display */
+#meaning {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 10px;
+  width: 750px;
+  overflow: hidden;
 }
 
-.container-col {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+#meaning p {
+  font-size: 16px;
+  color: #000;
+  text-shadow: none;
 }
 
-h3 {
-  margin-right: 10px;
-}
-
-.to-show {
-  display: none;
-}
-
-.to-show.show {
-  display: block;
-}
-
-.history-item-img {
-  width: 50px;
-  height: 100px;
-  padding-right: 10px;
-}
-
-.history {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+/* || History Section */
+#history {
+  align-items: start;
 }
 
 .history-item {
@@ -361,62 +220,35 @@ h3 {
   align-items: center;
 }
 
+.history-item-img {
+  width: 75px;
+  height: 100px;
+  border-radius: 5px;
+  margin: 5px 2px;
+}
+
 .history-item-text {
+  padding-left: 10px;
   padding-right: 10px;
 }
 
-.popup-container {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0 0 0 50%);
-  align-items: center;
-  justify-content: center;
-}
-
-/* Style for the popup box */
-.popup-box {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0 0 0 30%);
-}
-
-#display-img-left {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 250px;
-  height: 250px;
-}
-
-#display-img-mid {
-  position: absolute;
-  top: 0;
-  left: 5%;
-  width: 250px;
-  height: 250px;
-}
-
+/* || Main Card Display */
+#display-img-left,
+#display-img-mid,
 #display-img-right {
-  position: absolute;
-  top: 0;
-  left: 10%;
-  width: 250px;
-  height: 250px;
+  margin-top: 4%;
+  width: 283px;
+  height: 363px;
+  border-radius: 15px;
 }
 
 #display-back-left,
 #display-back-mid,
 #display-back-right {
-  width: 250px;
-  height: 290px;
+  width: 350px;
+  height: 390px;
 }
 
-/* flip function */
 .animation {
   transition: all 0.3s ease;
 }
@@ -424,11 +256,11 @@ h3 {
 .card-container {
   transition: all 0.3s ease;
   perspective: 800px;
-  /* padding-left: 1%;*/
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 10px;
+  margin-top: 40px;
+  width: 750px;
 }
 
 .cardflip {
@@ -442,43 +274,30 @@ h3 {
   transform: rotateY(180deg);
 }
 
+.front {
+  transition: all 0.5s;
+  position: absolute;
+  width: 100%;
+}
+
 .cardflip .front,
 .cardflip .back {
   display: block;
-  /* height: 100%;
-    width: 100%;
-    line-height: 60px;
-    color: white;  */
   text-align: center;
-  /* font-size: 4em; */
   backface-visibility: hidden;
 }
 
+.cardflip.flipped .front {
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
 .cardflip .back {
-  /* margin-top: -30px;
-    padding-top: 10%; */
   font-size: 16px;
   text-align: center;
   line-height: 20px;
   white-space: nowrap;
   transform: rotateY(180deg);
-}
-
-@media (max-width: 1000px) {
-  .cardflip {
-    height: 175px;
-  }
-}
-
-@media (max-width: 390px) {
-  .cardflip {
-    width: 100%;
-    height: 150px;
-  }
-
-  .cardWrapper {
-    margin-left: 4%;
-  }
 }
 
 .card-text {
@@ -490,46 +309,96 @@ h3 {
   text-align: center;
 }
 
-textarea{
-  color: #8da1ff;
-  font-family: "DM Sans", sans-serif;
-  font-style: normal;
+textarea {
+  margin-top: -10px;
+  border-radius: 15px;
+  font-size: 17px;
   border: none;
   resize: none;
-  background-repeat: no-repeat;
   cursor: pointer;
-  background: rgb(197,235,253);
-  background: linear-gradient(180deg, rgba(197,235,253,1) 0%, rgba(167,230,251,1) 99%);
-
-}
-#history {
-  align-items: start;
+  text-align: center;
+  background: linear-gradient(180deg, rgba(197 235 253 / 100%) 0%, rgba(167 230 251 / 100%) 99%);
+  background-repeat: no-repeat;
 }
 
-#meaning {
+.cardflip:hover .front {
+  transform: perspective(900px) translateY(-5%) rotateY(20deg) translateZ(0);
+}
+
+.front::before,
+.front::after {
+  content: "";
+  opacity: 0;
+  width: 100%;
+  height: 80px;
+  transition: all 0.5s;
+  position: absolute;
+  left: 0;
+}
+
+.front::before {
+  top: 0;
+  height: 100%;
+}
+
+.front::after {
+  bottom: 0;
+  opacity: 1;
+}
+
+.cardflip:hover .front::before,
+.front::after {
+  opacity: 1;
+}
+
+.cardflip:hover .front::after {
+  height: 120px;
+}
+
+/* || Renaming Popup */
+.popup-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0 0 0 / 50%);
+  align-items: center;
+  justify-content: center;
+}
+
+.popup-box {
+  background-color: #bfdfec;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0 0 0 30%);
+}
+
+.popup-box input {
+  border-radius: 15px;
+  font-size: 17px;
+  border: none;
+  resize: none;
+  cursor: pointer;
+  text-align: center;
+  background-color: white;
+  background-repeat: no-repeat;
+}
+
+/* || Utility Classes */
+
+.container-col {
   display: flex;
-  width: 750px;
-  overflow: hidden;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-#meaning p {
-  font-size: 16px;
+.to-show {
+  display: none;
 }
 
-#meaning, .card-container {
-  width: 750px;
+.to-show.show {
+  display: block;
 }
-
-#question-list {
-  background-color: #fff;
-  padding: 16px;
-  font-family: "DM Sans", sans-serif;
-  color: #83818c;
-  font-weight: bold;
-  border-radius: 30px;
-}
-
-#question-list option:selected {
-  background-color: #83818c;
-}
-
