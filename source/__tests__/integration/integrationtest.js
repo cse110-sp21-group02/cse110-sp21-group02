@@ -56,7 +56,7 @@ describe('Basic user flow for Website', () => {
         const meaning = await page.$('#meaning');
         let exists =false;
         let classList = await meaning.getProperty('classList');
-        if(classList.length !=0 ){
+        if(classList.length !== 0){
           exists = true;
         }
         expect(exists).toBe(true);
