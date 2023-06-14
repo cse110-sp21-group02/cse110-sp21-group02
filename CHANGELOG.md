@@ -1,6 +1,13 @@
 # Changelog
 This file contains the version log for the fortune teller project.
 
+## [v1.1.0] - 2023-06-11
+[`cf97680`](https://github.com/cse110-sp23-group02/cse110-sp23-group02/commit/cf976800f38603f76764b8d46db017b3d517df98) - Bug fixes
+### New changes
+- Card dimensions are fixed
+- Card images have been updated
+- Buttons have consistent styling
+
 ## [v1.0.1] - 2023-06-07
 [`ae8608c`](https://github.com/cse110-sp23-group02/cse110-sp23-group02/commit/ae8608c3ffd9c8fc87d5be8f2899c3ff3f902c28) - Bug fixes
 ### Bugs fixed
